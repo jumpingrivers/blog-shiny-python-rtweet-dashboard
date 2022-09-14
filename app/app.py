@@ -10,7 +10,9 @@ import pandas as pd
 import plotnine as gg
 
 # read data from file
-jr = pd.read_csv("jr_shiny.csv")
+# jr = pd.read_csv("jr_shiny.csv")
+from pathlib import Path
+jr = pd.read_csv(Path(__file__).parent / "jr_shiny.csv")
 jr = jr.astype({"day": "object"})
 
 # dictionary of choices for input_select
