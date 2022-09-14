@@ -24,7 +24,7 @@ jobs:
         run: |
           pip install shinylive
           mkdir ~/.cache/shiny # temp fix for missing dir
-          python -m shinylive export app site
+          shinylive export app site
       - name: Deploy to GitHub pages 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@4.1.4
