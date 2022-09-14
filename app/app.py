@@ -11,8 +11,13 @@ import plotnine as gg
 
 # read data from file
 # jr = pd.read_csv("jr_shiny.csv")
+
+## BEGIN: shinylive specific modification for loading 
+## data file on hosted app
 from pathlib import Path
 jr = pd.read_csv(Path(__file__).parent / "jr_shiny.csv")
+## END
+
 jr = jr.astype({"day": "object"})
 
 # dictionary of choices for input_select
