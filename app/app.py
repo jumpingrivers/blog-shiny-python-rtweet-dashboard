@@ -4,6 +4,8 @@ Created on Mon Aug  1 11:55:28 2022
 
 @author: dfs20
 """
+# explicit import of jinja2 required for shinylive 0.0.7
+import jinja2
 
 from shiny import App, ui, render
 import pandas as pd
